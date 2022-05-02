@@ -10,6 +10,10 @@ Product.belongsTo(Category, {
 })
 
 // Categories have many Products
+Category.hasMany(Product, {
+  onDelete: 'SET NULL'
+})
+
 
 // Products belongToMany Tags (through ProductTag)
 Product.belongsToMany(Tag, {
